@@ -1,0 +1,408 @@
+:root {
+    --primary-dark: #074533;
+    --text-main: #333333;
+    --text-muted: #757575;
+    --bg-light: #f9f8f6; 
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #FAFAF9; 
+    margin: 0;  
+    padding: 0;  
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; 
+}
+
+#title {
+    font-family: 'Noto Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #064E3B;
+    text-align: center;      
+    text-transform: uppercase;
+    letter-spacing: 5px;    
+    margin: 30px 0 10px 0;  
+    width: 100%;
+    grid-column: 1 / -1;   
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 50px;
+}
+
+.progress-step {
+    flex: 1;
+    padding-bottom: 10px;
+}
+
+.progress-step.active {border-bottom: 3px solid var(--primary-dark);}
+
+.step-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.progress-step.active .step-label {color: var(--primary-dark);}
+
+.personal-details-form {flex: 2;}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #b0b0b0;
+    padding-left: 10px;
+}
+
+input:focus, textarea:focus {border-bottom: 1px solid var(--primary-dark);}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.country-code {
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.marketing-opt-in {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 40px 0;
+    font-size: 13px;
+    color: #555;
+    padding-top: px;
+}
+
+.cta-button {
+    width: 100%;
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.cta-button:hover {opacity: 0.9;}
+
+.secure-footer {
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar / Booking Summary */
+.booking-summary {
+    flex: 1;
+    background-color: var(--bg-light);
+    padding: 30px;
+}
+
+.booking-summary h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary-item .label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+.summary-item .value {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.summary-item .price {font-size: 14px;}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0ddd5;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.summary-total span:first-child {
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+}
+
+.total-price {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-dark);
+}
+
+/*BACK BUTTON*/
+.navigation-row {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #757575; 
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {color: #074533; }
+
+.back-btn .arrow {font-size: 16px; }
+
+/*FOR LOADING*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+/* State when active */
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-content {
+    text-align: center;
+    width: 300px;
+}
+
+.logo-loading {
+    font-family: 'Noto Serif', serif;
+    font-size: 26px;
+    font-style: italic;
+    letter-spacing: 5px;
+    color: #074533;
+    margin-bottom: 15px;
+}
+
+.loader-bar-container {
+    width: 100%;
+    height: 2px;
+    background-color: #E5E7EB;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* progress bar */
+.loader-bar-progress {
+    position: absolute;
+    height: 100%;
+    width: 40%; 
+    background-color: #074533;
+    animation: loading-animation 1.5s infinite linear;
+}
+
+@keyframes loading-animation {
+    0% { left: -40%; }
+    100% { left: 100%; }
+}
+
+.loading-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #A8A29E;
+    text-transform: uppercase;
+}
+
+
+/*B2 - P1 LAODING*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-layout {
+        flex-direction: column-reverse; 
+        gap: 30px;
+    }
+
+    .booking-summary {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .personal-details-form {
+        width: 100%;
+    }
+
+    .input-row {
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .booking-header {
+        display: none !important;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+    
+    #title {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+}
+
+/*FOR HEADER*/
+.mobile-header {
+    display: none;
+    background-color: #F3F4F6; 
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.mobile-header .logo-text {
+    font-family: 'Noto Serif', serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #074533; 
+    text-transform: uppercase;
+}
+
+.mobile-header .menu-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    color: #074533;
+    cursor: pointer;
+}

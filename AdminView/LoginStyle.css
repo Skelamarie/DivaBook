@@ -1,0 +1,196 @@
+/* --- BASE SETUP & MOBILE FIRST --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #FAFAFA;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+.main-header {
+    padding: 15px 0;
+    text-align: center;
+    background: #2D4336;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* --- LOGIN WRAPPER --- */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- COMPACT CARD --- */
+.login-card {
+    background: #fff;
+    width: 100%;
+    max-width: 360px; /* Slimmer for mobile */
+    padding: 30px 25px;
+    border-radius: 8px;
+    text-align: center;
+    /* On mobile, keep shadow very light */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.welcome-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #2D4336;
+    margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+/* --- INPUTS & INTERACTIVITY --- */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #444;
+}
+
+.forgot-link {
+    font-size: 10px;
+    color: #AAA;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover { color: #2D4336; }
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2D4336;
+    box-shadow: 0 0 0 3px rgba(45, 67, 54, 0.05);
+}
+
+/* --- FIXED PASSWORD ICON ALIGNMENT --- */
+.input-with-icon { 
+    position: relative; 
+    width: 100%;
+}
+
+.input-with-icon input { 
+    padding-right: 45px; /* Leave space so text doesn't go under the eye */
+    display: block;      /* Ensures it fills the container correctly */
+}
+
+.icon-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;            /* Center vertically */
+    transform: translateY(-50%); /* Perfect vertical alignment */
+    background: none;
+    border: none;
+    color: #CCC;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;        /* Better click target */
+    z-index: 5;          /* Ensure it stays on top */
+    transition: color 0.2s ease;
+}
+
+.icon-btn:hover {
+    color: #2D4336;      /* Match your theme on hover */
+}
+
+.feather { 
+    width: 18px; 
+    height: 18px; 
+    pointer-events: none; /* Let the click pass through to the button */
+}
+
+/* --- BUTTON --- */
+.sign-in-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2D4336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.sign-in-btn:hover { background: #1e2e25; }
+.sign-in-btn:active { transform: scale(0.98); }
+
+/* --- FOOTER & LINKS --- */
+.register-link { margin-top: 25px; font-size: 12px; color: #888; }
+.register-link a { color: #2D4336; font-weight: 600; text-decoration: none; }
+
+.bottom-footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #BBB;
+}
+
+.footer-links { display: flex; gap: 15px; }
+.footer-links a { color: inherit; text-decoration: none; }
+
+/* --- TABLET & DESKTOP QUERIES --- */
+@media (min-width: 768px) {
+    .login-card {
+        max-width: 380px;
+        padding: 40px 35px;
+        box-shadow: 0px 16px 30px 20px rgba(0,0,0,0.2);
+    }
+    
+    .bottom-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body { background-color: #F7F7F7; } /* Slightly deeper contrast on big screens */
+}

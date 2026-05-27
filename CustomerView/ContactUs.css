@@ -1,0 +1,65 @@
+/* ==========================================================================
+   PHONE SCREEN STYLES (Starts here and gets bigger)
+   ========================================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #FAFAFA; color: #333; }
+
+.contact-wrapper { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+
+/* The text at the very top */
+.contact-header { text-align: center; margin-bottom: 40px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 32px; color: #2D4336; margin-bottom: 10px; }
+.section-subtitle { font-size: 13px; color: #888; }
+
+/* The box holding everything */
+.contact-container { display: flex; flex-direction: column; gap: 40px; }
+
+/* Our Address and Email Section */
+.info-group { margin-bottom: 25px; }
+.info-group label { display: block; font-size: 10px; font-weight: 700; color: #999; letter-spacing: 1.5px; margin-bottom: 8px; }
+.info-group p { font-size: 14px; color: #444; line-height: 1.6; }
+.info-group a { color: #2D4336; text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: 0.3s; }
+.info-group a:hover { border-bottom: 1px solid #2D4336; }
+
+.info-row { display: flex; flex-direction: column; gap: 20px; }
+.map-box { height: 180px; background: #EEE; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #AAA; font-size: 12px; font-weight: 600; border: 1px solid #E0E0E0; }
+
+/* The Form Where Users Type */
+.contact-form-card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+.contact-form-card h3 { font-family: 'Playfair Display', serif; color: #2D4336; margin-bottom: 20px; }
+
+/* Text boxes inside the form */
+.input-field { margin-bottom: 20px; }
+.input-field label { display: block; font-size: 10px; font-weight: 600; color: #666; margin-bottom: 8px; }
+
+input, select, textarea { width: 100%; padding: 14px; border: 1px solid #EAEAEA; border-radius: 6px; font-size: 14px; background: #F9F9F9; transition: all 0.3s ease; }
+
+/* Make the box light up when clicked */
+input:focus, select:focus, textarea:focus { background: #fff; border-color: #2D4336; box-shadow: 0 0 0 4px rgba(45, 67, 54, 0.05); outline: none; }
+textarea { height: 120px; resize: none; }
+
+/* The Send Button */
+.submit-btn { width: 100%; background: #2D4336; color: #fff; padding: 16px; border: none; border-radius: 6px; font-weight: 600; font-size: 12px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: 0.3s; }
+.submit-btn:hover { background: #1e2e25; transform: translateY(-2px); }
+.btn-icon { width: 16px; height: 16px; transition: 0.3s; }
+.submit-btn:hover .btn-icon { transform: translateX(5px); }
+
+/* ==========================================================================
+   TABLET SCREEN STYLES
+   ========================================================================== */
+@media (min-width: 768px) {
+    .info-row { flex-direction: row; justify-content: flex-start; gap: 60px; }
+    .form-grid { display: flex; gap: 20px; }
+    .form-grid .input-field { flex: 1; }
+    .contact-wrapper { padding: 60px 40px; }
+}
+
+/* ==========================================================================
+   COMPUTER SCREEN STYLES (Side-by-side layout)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .contact-container { flex-direction: row; align-items: flex-start; }
+    .contact-info { flex: 1; padding-right: 50px; }
+    .contact-form-card { flex: 1.2; padding: 50px; }
+    .section-title { font-size: 42px; }
+}

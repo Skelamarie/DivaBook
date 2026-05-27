@@ -1,0 +1,90 @@
+.detail-grid { 
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 1.5rem; 
+    margin-top: 2rem;
+    grid-template-areas: 
+        "left-stack payment reference"
+        "left-stack payment reference";
+}
+
+.left-column-stack { 
+    grid-area: left-stack; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.payment-card { 
+    grid-area: payment; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+}
+
+.reference-card { 
+    grid-area: reference; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+}
+
+.detail-card { 
+    background: white; 
+    border: 1px solid var(--outline); 
+    border-radius: 12px; 
+    padding: 1.5rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.img-container {
+    width: 100%;
+    flex-grow: 1; 
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--outline);
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+}
+
+.img-preview { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.placeholder-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #f9fafb;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.info-row { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; }
+.info-label { color: var(--secondary); font-weight: 600; }
+.info-value { font-weight: 700; color: var(--text-main); }
+
+@media (max-width: 1200px) {
+    .detail-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "service payment"
+            "contact reference";
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "service" "contact" "payment" "reference";
+    }
+}
